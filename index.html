@@ -1,10 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<title>Tu y Yo ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💖 Pedido Especial 💖</title>
+
+<style>
+body{
+    margin:0;
+    background:#ffb6c1;
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+}
+
+.caixa{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+h1{
+    color:#ff1493;
+}
+
+button{
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    margin:10px;
+}
+
+#sim{
+    background:#28a745;
+    color:white;
+}
+
+#nao{
+    background:#dc3545;
+    color:white;
+    position:absolute;
+}
+
+</style>
 </head>
+
 <body>
-<h1>Em breve... 💖</h1>
-<p>Nosso pedido de namoro está sendo preparado.</p>
+
+<div class="caixa">
+<h1>💖 Você aceita namorar comigo? 💖</h1>
+
+<button id="sim" onclick="alert('❤️ Eu te amo! ❤️')">Sim</button>
+
+<button id="nao">Não</button>
+</div>
+
+<script>
+const nao=document.getElementById("nao");
+
+nao.addEventListener("click",()=>{
+const x=Math.random()*(window.innerWidth-100);
+const y=Math.random()*(window.innerHeight-50);
+
+nao.style.left=x+"px";
+nao.style.top=y+"px";
+});
+</script>
+
 </body>
 </html>
