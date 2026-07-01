@@ -1,105 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>💖 Tu y Yo 💖</title>
-
+  <title>Para ela 💗</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div id="stars"></div>
-<div id="hearts"></div>
-
-<section id="inicio" class="tela">
-
-    <h1 class="titulo">
-        ✨ Para la mujer más hermosa del mundo ✨
-    </h1>
-
-    <p id="texto"></p>
-
-    <button id="continuar">
-        💖 Continuar
-    </button>
-
-</section>
-
-<section id="coracao" class="tela escondido">
-
-    <h2>Toca mi corazón ❤️</h2>
-
-    <div id="heart">
-        ❤️
-    </div>
-
-</section>
-
-<section id="pedido" class="tela escondido">
-
-<h1>
-💖 ¿QUIERES SER MI NOVIA? 💖
-</h1>
-
-<div class="botoes">
-
-<button id="sim">
-💖 Sí
-</button>
-
-<button id="nao">
-💔 No
-</button>
-
+<!-- TELA 1 -->
+<div id="tela1" class="tela ativa">
+  <h1>✨ Para la mujer más hermosa del mundo ✨</h1>
+  <p id="texto"></p>
+  <button onclick="irTela2()">Continuar</button>
 </div>
 
-<p id="mensagemNo"></p>
-
-</section>
-
-<section id="final" class="tela escondido">
-
-<h1>
-❤️ Ahora somos tú y yo ❤️
-</h1>
-
-<div class="galeria">
-
-<img src="foto1.jpg">
-
-<img src="foto2.jpg">
-
-<img src="foto3.jpg">
-
+<!-- TELA 2 -->
+<div id="tela2" class="tela">
+  <div class="coracao" onclick="irTela3()">❤️</div>
+  <p>Toca mi corazón ❤️</p>
 </div>
 
-<p class="finalTexto">
+<!-- PEDIDO -->
+<div id="tela3" class="tela">
+  <h1>¿QUIERES SER MI NOVIA?</h1>
 
-Y ahora somos tú y yo para siempre, amor. ❤️
+  <div class="botoes">
+    <button id="sim" onclick="sim()">💖 Sí</button>
+    <button id="nao" onclick="nao()">💔 No</button>
+  </div>
 
-<br><br>
+  <p id="msg"></p>
+</div>
 
-Prometo hacerte feliz, cuidarte, amarte y hacer de ti la mujer más feliz del mundo.
+<!-- FINAL -->
+<div id="final" class="tela">
 
-<br><br>
+  <h1>❤️ Y ahora somos tú y yo ❤️</h1>
 
-Hoy 30/06 será un día que siempre recordaremos.
+  <div id="fotos">
+    <img src="foto1.jpg" class="foto">
+    <img src="foto2.jpg" class="foto">
+    <img src="foto3.jpg" class="foto">
+  </div>
 
-<br><br>
+  <p>
+    Prometo hacerte feliz, cuidarte y amarte todos los días.<br><br>
+    Hoy começa nossa história: tú y yo para siempre. 🥺❤️
+  </p>
+</div>
 
-Quiero solamente a ti, mi vida, mi princesa hermosa, linda, perfecta, maravillosa...
-
-<br><br>
-
-❤️ Mi novia. ❤️
-
-</p>
-
-</section>
+<audio id="musica" loop>
+  <source src="musica.mp3" type="audio/mp3">
+</audio>
 
 <script src="script.js"></script>
-
 </body>
-    </html>
+  </html>
