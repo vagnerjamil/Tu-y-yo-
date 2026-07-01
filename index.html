@@ -1,77 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>💖 Pedido Especial 💖</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💖 Tu y Yo 💖</title>
 
-<style>
-body{
-    margin:0;
-    background:#ffb6c1;
-    font-family:Arial,sans-serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    text-align:center;
-}
-
-.caixa{
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 0 20px rgba(0,0,0,.2);
-}
-
-h1{
-    color:#ff1493;
-}
-
-button{
-    padding:12px 25px;
-    font-size:18px;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    margin:10px;
-}
-
-#sim{
-    background:#28a745;
-    color:white;
-}
-
-#nao{
-    background:#dc3545;
-    color:white;
-    position:absolute;
-}
-
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="caixa">
-<h1>💖 Você aceita namorar comigo? 💖</h1>
+<div id="stars"></div>
+<div id="hearts"></div>
 
-<button id="sim" onclick="alert('❤️ Eu te amo! ❤️')">Sim</button>
+<section id="inicio" class="tela">
 
-<button id="nao">Não</button>
+    <h1 class="titulo">
+        ✨ Para la mujer más hermosa del mundo ✨
+    </h1>
+
+    <p id="texto"></p>
+
+    <button id="continuar">
+        💖 Continuar
+    </button>
+
+</section>
+
+<section id="coracao" class="tela escondido">
+
+    <h2>Toca mi corazón ❤️</h2>
+
+    <div id="heart">
+        ❤️
+    </div>
+
+</section>
+
+<section id="pedido" class="tela escondido">
+
+<h1>
+💖 ¿QUIERES SER MI NOVIA? 💖
+</h1>
+
+<div class="botoes">
+
+<button id="sim">
+💖 Sí
+</button>
+
+<button id="nao">
+💔 No
+</button>
+
 </div>
 
-<script>
-const nao=document.getElementById("nao");
+<p id="mensagemNo"></p>
 
-nao.addEventListener("click",()=>{
-const x=Math.random()*(window.innerWidth-100);
-const y=Math.random()*(window.innerHeight-50);
+</section>
 
-nao.style.left=x+"px";
-nao.style.top=y+"px";
-});
-</script>
+<section id="final" class="tela escondido">
+
+<h1>
+❤️ Ahora somos tú y yo ❤️
+</h1>
+
+<div class="galeria">
+
+<img src="foto1.jpg">
+
+<img src="foto2.jpg">
+
+<img src="foto3.jpg">
+
+</div>
+
+<p class="finalTexto">
+
+Y ahora somos tú y yo para siempre, amor. ❤️
+
+<br><br>
+
+Prometo hacerte feliz, cuidarte, amarte y hacer de ti la mujer más feliz del mundo.
+
+<br><br>
+
+Hoy 30/06 será un día que siempre recordaremos.
+
+<br><br>
+
+Quiero solamente a ti, mi vida, mi princesa hermosa, linda, perfecta, maravillosa...
+
+<br><br>
+
+❤️ Mi novia. ❤️
+
+</p>
+
+</section>
+
+<script src="script.js"></script>
 
 </body>
-</html>
+    </html>
